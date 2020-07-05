@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+
+<view class="banner-wrapper">
+  <view class="tip">您赢了
+    <view class="tip-num">{{winNum}}</view>
+  局
+   </view>
+
+  <view class="show">
+    <image class="img" src="{{imgs[currentIndex % 3]}}"></image>
+    <view class="reslut">{{result}}</view>
+    <image class="img" src="{{img_select_url}}"></image>
+  </view>
+
+</view>
+
+<view class="control-wrapper">
+  <view class="btn-warpper">
+    <view class="img-wrapper">
+      <image class="img img-samll" wx:for="{{imgs}}" wx:for-index="idx" wx:key="unique" wx:for-item="img" src="{{img}}" data-img="{{img}}" bindtap="select"></image>
+    </view>
+    <view class="btn-restart" bindtap="restart">重新开始</view>
+  </view>
+</view>
+
+</view>
